@@ -1,0 +1,29 @@
+@url=http://localhost:5001/api
+
+@json=Content-Type: application/json
+
+### 所有用户
+get {{url}}/users
+
+### 注册
+post {{url}}/register
+{{json}}
+
+{
+  "username": "user3",
+  "password": "123456"
+}
+### 登录
+
+post {{url}}/login
+{{json}}
+
+{
+  "username": "user2",
+  "password": "123456"
+}
+
+
+### 个人信息
+get {{url}}/profile
+Authorization: Bearer 
